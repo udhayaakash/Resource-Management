@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Resource Table</title>
+	<link rel="stylesheet" type="text/css" href="../static/resource.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+</head>
+<body>
+  <div id="header">
+    <h1><i class="fas fa-laptop"></i> RESOURCE TABLE</h1>
+  </div>
+
+	<table border=1>
+    <tr id="container">
+     <th>R_ID</th>
+    <th>RESO_NAME</th>
+    <th>QUANTITY</th>
+    </tr>
+  {% for user in userDetails %}
+  <tr id="container">
+    <td>{{user[0]}}</td>
+    <td>{{user[1]}}</td>
+    <td>{{user[2]}}</td> 
+  </tr>
+  {% endfor %}
+</table>
+</body>
+</html>

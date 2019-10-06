@@ -1,0 +1,34 @@
+create table resource1(rid varchar(20) NOT NULL,reso_name varchar(20),quantity numeric(3,0),primary key(rid));
+create table project1(pid varchar(20) NOT NULL,proj_name varchar(20),priority numeric(3,0),start_date date,end_date date,leader_eid varchar(20),primary key(pid));  
+create table employee1(eid varchar(20) NOT NULL,rid varchar(20) NOT NULL,pid varchar(20) NOT NULL,first_name varchar(20),last_name varchar(20),dob date,doj date,phone_no numeric(10,0),city varchar(20),skill numeric(3,0),primary key (eid),foreign key(rid) references resource1(rid),foreign key(pid) references project1(pid));
+
+insert into resource1 values('r1','hp',1);
+insert into resource1 values('r2','dell',1);
+insert into resource1 values('r3','sony',1);
+insert into resource1 values('r4','kolly',1);
+
+commit ;
+
+insert into project1 values('p1','IOT1',4,'2008-04-02','2009-02-02','e1');
+insert into project1 values('p2','IOT2',4,'2009-04-02','2009-02-02','e2');
+
+insert into employee1 values('e1','r1','p1','Udhay','Aakash','2009-04-02','2010-07-03',9080192334,'chennai',9);
+insert into employee1 values('e2','r2','p2','Ragul','Sahi','2009-04-02','2010-07-03',9080192334,'Salem',9);
+
+select * from employee1;
+
+commit;
+
+select * from resource1;
+
+
+
+
+insert into DATE7 values('d1','2017-10-10','2017-12-12');
+insert into DATE7 values('d2','2018-05-15','2018-08-01');
+insert into DATE7 values('d3','2016-02-16','2016-04-24');
+insert into DATE7 values('d4','2019-01-28','2019-03-03');
+insert into DATE7 values('d5','2017-12-01','2018-02-09');
+
+SELECT *
+FROM DATE7;

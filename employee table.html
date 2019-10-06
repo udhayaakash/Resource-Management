@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Employee Table</title>
+	<link rel="stylesheet" type="text/css" href="../static/employee.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+</head>
+<body>
+  <div id="header">
+    <h1><i class="fas fa-user-tie"></i> EMPLOYEE TABLE</h1>
+  </div>
+
+	<table border=1>
+    <tr id="container">
+     <th>EID</th>
+    <th>PID</th>
+    <th>RID</th>
+    <th>NAME_ID</th>
+    <th>C_ID</th>
+    <th>DOB</th>
+    <th>DOJ</th>
+    <th>CITY</th>
+    <th>SKILL</th>
+    <th>RESO_NEEDED</th>
+    <th>AVAILABLE</th>
+    </tr>
+  {% for user in userDetails %}
+  <tr id="container">
+    <td>{{user[0]}}</td>
+    <td>{{user[1]}}</td>
+    <td>{{user[2]}}</td> 
+    <td>{{user[3]}}</td> 
+    <td>{{user[4]}}</td> 
+    <td>{{user[5]}}</td> 
+    <td>{{user[6]}}</td> 
+    <td>{{user[7]}}</td> 
+    <td>{{user[8]}}</td> 
+    <td>{{user[9]}}</td> 
+    <td>{{user[10]}}</td> 
+  </tr>
+  {% endfor %}
+</table>
+</body>
+</html>
